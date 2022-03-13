@@ -1,0 +1,25 @@
+#ifndef __RPMMULTI_ERRS_
+#define __RPMMULTI_ERRS_
+
+#define RET_OK (0)
+#define CERT_EXIST (10000)
+#define NAME_EXIST (10001)
+#define CERT_INVALID (10002)
+#define PASS_ERR (10003)
+#define OUTOF_MEM (10004)
+#define FILE_NO_EXIST (10005)
+#define SIGN_ERR (10006)
+#define VERIFY_ERR (10007)
+#define SIGN_SUCC (10008)
+#define VERIFY_SUCC (10009)
+#define DIGEST_SUCC (10010)
+#define DIGEST_ERR (10011)
+#define CODE_ERR (10012)
+#define PRIVKEY_ERR (10013)
+#define NO_SET_PRIVKEY (10014)
+#define FILE_ALREADY_EXIST (10015)
+#define PLUG_TOO_MANY (10016)
+#define NO_PLUG_UKEY (10017)
+#define DIR_NO_EXIST (10018)
+
+#endif

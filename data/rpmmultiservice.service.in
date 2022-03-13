@@ -1,0 +1,11 @@
+[Unit]
+Description=rpmmulti service
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.RpmMultiService
+ExecStart=@rpmmultiserviceprivdir@/rpmmultiserviced
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<node name="/">
+  <interface name="org.freedesktop.RpmMultiService.Base">
+    <method name="GetRpminfos">
+      <arg name="code" type="s" />
+      <arg name="ret" type="a(sss)" direction="out" />
+    </method>
+    <method name="GetRpminfo">
+      <arg name="code" type="s" />
+      <arg name="hash" type="s" />
+      <arg name="cert" type="s" direction="out" />
+      <arg name="name" type="s" direction="out" />
+      <arg name="before" type="s" direction="out" />
+      <arg name="after" type="s" direction="out" />
+      <arg name="time" type="s" direction="out" />
+    </method>
+    <method name="InsertCert">
+      <arg name="code" type="s" />
+      <arg name="path" type="s" />
+      <arg name="name" type="s" />
+      <arg name="ret" type="i" direction="out" />
+    </method>
+    <method name="DeleteCert">
+      <arg name="code" type="s" />
+      <arg name="hash" type="s" />
+      <arg name="ret" type="i" direction="out" />
+    </method>
+    <method name="Sm3Digest">
+      <arg name="code" type="s" />
+      <arg name="path" type="s" />
+      <arg name="ret" type="i" direction="out" />
+      <arg name="hash" type="s" direction="out" />
+    </method>
+    <method name="Sm2Sign">
+      <arg name="code" type="s" />
+      <arg name="pass" type="s" />
+      <arg name="hash" type="s" />
+      <arg name="ret" type="i" direction="out" />
+      <arg name="sig" type="s" direction="out" />
+    </method>
+    <method name="Sm2Verify">
+      <arg name="code" type="s" />
+      <arg name="hash" type="s" />
+      <arg name="sig" type="s" />
+      <arg name="ret" type="i" direction="out" />
+    </method>
+    <method name="ImportPrivkey">
+      <arg name="code" type="s" />
+      <arg name="pass" type="s" />
+      <arg name="path" type="s" />
+      <arg name="filename" type="s" />
+      <arg name="ret" type="i" direction="out" />
+    </method>
+    <method name="GetPrivkeys">
+      <arg name="code" type="s" />
+      <arg name="ret" type="a(s)" direction="out" />
+    </method>
+    <method name="SetPrivkey">
+      <arg name="code" type="s" />
+      <arg name="name" type="s" />
+      <arg name="ret" type="i" direction="out" />
+    </method>
+    <method name="InsertUkey">
+      <arg name="code" type="s" />
+      <arg name="path" type="s" />
+      <arg name="pass" type="s" />
+      <arg name="pin" type="s" />
+      <arg name="ret" type="i" direction="out" />
+    </method>
+    <method name="BackupParam">
+      <arg name="code" type="s" />
+      <arg name="path" type="s" />
+      <arg name="pin" type="s" />
+      <arg name="ret" type="i" direction="out" />
+    </method>
+  </interface>
+</node>

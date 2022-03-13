@@ -1,0 +1,7 @@
+[D-BUS Service]
+Name=org.freedesktop.RpmMultiService
+Exec=@rpmmultiserviceprivdir@/rpmmultiserviced
+User=root
+SystemdService=rpmmultiservice.service
+StandardOutput=syslog
+StandardError=syslog

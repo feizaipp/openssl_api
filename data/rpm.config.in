@@ -1,0 +1,7 @@
+# status:0-gpg;1-usbkey;2-soft-sm2
+status=2
+
+# switch:0-dont verify sign;1-verify sign
+switch=1
+
+path=
